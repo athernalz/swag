@@ -10,11 +10,15 @@ public class PlayerXPManager : MonoBehaviour
     public float currentXP;
     public float maxXP;
     public int currentLevel;
+    public Canvas upgradeScreen;
+    public UpgradesManager upgradesManager;
     // Start is called before the first frame update
     void Start()
     {
         currentXP = 0;
         maxXP = 100;
+        upgradeScreen.enabled = false;
+        upgradeScreen.gameObject.SetActive(false);
     }
 
 
@@ -41,11 +45,18 @@ public class PlayerXPManager : MonoBehaviour
 
     void levelUp()
     {
+        showUpgradeOptions();
+        upgradesManager.DisplayRandomPowerups();
         currentLevel++;
         maxXP *= 1.5f;
         currentXP = 0;
         Debug.Log("Leveled up! Your level is now: " + currentLevel);
     }
 
+    void showUpgradeOptions()
+    {
+        upgradeScreen.enabled = true;
+        upgradeScreen.gameObject.SetActive(true);
+    }
     
 }
