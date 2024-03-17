@@ -19,10 +19,11 @@ public class PlayerHealth : MonoBehaviour
     private bool canTakeDamage = true;
     private float damageCooldownTimer = 0f;
     private float damageCooldownDuration = 0.3f;
-
+    public Image redFlash;
     void Start()
     {
         currentHP = maxHP;
+        redFlash.enabled = false;
     }
     public void takeDamage(int amount)
     {
@@ -40,7 +41,9 @@ public class PlayerHealth : MonoBehaviour
             {
                 canTakeDamage = false;
                 damageCooldownTimer = damageCooldownDuration;
+                FlashScreenRed();
             }
+
         }
     }
     public void OnCollisionStay2D(Collision2D collision)
@@ -61,8 +64,8 @@ public class PlayerHealth : MonoBehaviour
     }
     void Update()
     {
-    hpBar.fillAmount = (float) currentHP / 100;
-    hpText.text = currentHP.ToString();
+        hpBar.fillAmount = (float)currentHP / 100;
+        hpText.text = currentHP.ToString();
         if (currentHP <= 0)
         {
             Destroy(gameObject);
@@ -76,8 +79,22 @@ public class PlayerHealth : MonoBehaviour
             {
                 canTakeDamage = true;
             }
-        
+
+        }
+
+    }
+    public void FlashScreenRed()
+    {
+        // Enable the red flash image
+        redFlash.enabled = true;
+
+        // Reset the color after a short delay
+        Invoke("ResetRedFlash", 0.1f); // Adjust the delay as needed
     }
 
+    void ResetRedFlash()
+    {
+        // Disable the red flash image
+        redFlash.enabled = false;
     }
 }
