@@ -16,6 +16,9 @@ public class PlayerHealth : MonoBehaviour
     private int currentHP;
     public Image hpBar;
     public TMP_Text hpText;
+    private bool canTakeDamage = true;
+    private float damageCooldownTimer = 0f;
+    private float damageCooldownDuration = 0.3f;
 
     void Start()
     {
@@ -23,10 +26,24 @@ public class PlayerHealth : MonoBehaviour
     }
     public void takeDamage(int amount)
     {
-        currentHP = currentHP - amount;
-        Debug.Log("Player's health decreased to: " + currentHP);
+        if (canTakeDamage)
+        {
+            currentHP = currentHP - amount;
+            Debug.Log("Player's health decreased to: " + currentHP);
+
+            if (currentHP <= 0)
+            {
+                Death();
+            }
+
+            else
+            {
+                canTakeDamage = false;
+                damageCooldownTimer = damageCooldownDuration;
+            }
+        }
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         {
             if (collision.gameObject.CompareTag("Enemy"))
@@ -36,17 +53,31 @@ public class PlayerHealth : MonoBehaviour
 
         }
     }
+    void Death()
+    {
+        Debug.Log("Player has died");
+        kat.gameObject.SetActive(true);
+        currentHP = 0;
+    }
     void Update()
     {
+    hpBar.fillAmount = (float) currentHP / 100;
+    hpText.text = currentHP.ToString();
         if (currentHP <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("dead");
-            kat.gameObject.SetActive(true);
-        }
+            return;
 
-        hpBar.fillAmount = (float)currentHP / 100;
-        hpText.text = currentHP.ToString();
+        }
+        if (!canTakeDamage)
+        {
+            damageCooldownTimer -= Time.deltaTime;
+            if (damageCooldownTimer <= 0f)
+            {
+                canTakeDamage = true;
+            }
+        
+    }
 
     }
 }
