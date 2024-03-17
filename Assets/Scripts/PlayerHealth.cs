@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHP = maxHP;
         redFlash.enabled = false;
+        redFlash.gameObject.SetActive(true);
     }
     public void takeDamage(int amount)
     {
