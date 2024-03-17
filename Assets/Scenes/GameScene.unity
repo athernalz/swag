@@ -1255,6 +1255,7 @@ MonoBehaviour:
   maxHP: 100
   hpBar: {fileID: 830269445}
   hpText: {fileID: 638134337}
+  redFlash: {fileID: 0}
 --- !u!114 &1305448434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,6 +1268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ea39b69bd3d3d4f8b5b08d3218129c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xpBar: {fileID: 1979299443}
+  currentXP: 0
+  maxXP: 0
+  currentLevel: 0
 --- !u!1 &1492380414
 GameObject:
   m_ObjectHideFlags: 0
