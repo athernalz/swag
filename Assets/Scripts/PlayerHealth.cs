@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 
@@ -13,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     public Image kat;
     public int maxHP = 100;
     private int currentHP;
+    public Image hpBar;
+    public TMP_Text hpText;
 
     void Start()
     {
@@ -42,6 +45,8 @@ public class PlayerHealth : MonoBehaviour
             kat.gameObject.SetActive(true);
         }
 
+        hpBar.fillAmount = (float)currentHP / 100;
+        hpText.text = currentHP.ToString();
 
     }
 }
