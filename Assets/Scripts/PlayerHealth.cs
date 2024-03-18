@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
             }
 
         }
+
     }
     public void OnCollisionStay2D(Collision2D collision)
     {
@@ -65,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         hpBar.fillAmount = (float)currentHP / maxHP;
-        hpText.text = currentHP.ToString();
+        hpText.text = currentHP.ToString() + "/" + maxHP.ToString();
         if (currentHP <= 0)
         {
             Destroy(gameObject);
@@ -80,6 +81,11 @@ public class PlayerHealth : MonoBehaviour
                 canTakeDamage = true;
             }
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            takeDamage(15);
         }
 
     }
