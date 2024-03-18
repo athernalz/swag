@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7643521dc5964047b273bbb44c70b0c, type: 3}
   m_Name: RapidFire
   m_EditorClassIdentifier: 
-  upgradeName: very fast shooting
+  upgradeName: RAPID FIRE
   currentUpgradeLevel: 2
   baseEffect: 5
-  description: shoot ur faster
+  description: Increases your firing rate.
   icon: {fileID: 21300000, guid: f8a2328fa3c42634a85bb02517d7da8b, type: 3}

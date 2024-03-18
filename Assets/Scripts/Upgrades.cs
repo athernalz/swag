@@ -1,8 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrade", order = 51)]
 public class Upgrades : ScriptableObject
 {
+
     public string upgradeName;
     public int currentUpgradeLevel;
     public float baseEffect;

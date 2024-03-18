@@ -11,9 +11,15 @@ public class UpgradesManager : MonoBehaviour
     public TMP_Text[] upgradeNames; // Assign the corresponding Text components for names
     public TMP_Text[] upgradeDescription; // Assign the corresponding Text components for descriptions
     public Image[] upgradeIcons; // Assign the corresponding Image components for icons
+    public TMP_Text[] upgradeCurrentLevel;
     public PlayerHealth playerHealth;
     public PlayerMovement playerMovement;
     public GameObject disableUpgradeScreen;
+
+    private void Start()
+    {
+        
+    }
 
 
     // Call this method when the player levels up
@@ -38,6 +44,7 @@ public class UpgradesManager : MonoBehaviour
             upgradeNames[buttonIndex].text = upgrade.upgradeName;
             upgradeDescription[buttonIndex].text = upgrade.GetDynamicDescription();
             upgradeIcons[buttonIndex].sprite = upgrade.icon;
+            upgradeCurrentLevel[buttonIndex].text = upgrade.currentUpgradeLevel.ToString();
 
             // Assign a listener to the button (make sure to remove old listeners first)
             upgradeButtons[buttonIndex].onClick.RemoveAllListeners();
