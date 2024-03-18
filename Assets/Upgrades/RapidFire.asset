@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: RapidFire
   m_EditorClassIdentifier: 
   upgradeName: very fast shooting
-  upgradeSprite: {fileID: 21300000, guid: f8a2328fa3c42634a85bb02517d7da8b, type: 3}
-  currentUpgradeLevel: 1
+  currentUpgradeLevel: 2
   baseEffect: 5
   description: shoot ur faster
   icon: {fileID: 21300000, guid: f8a2328fa3c42634a85bb02517d7da8b, type: 3}

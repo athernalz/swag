@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Image kat;
     public int maxHP = 100;
-    private int currentHP;
+    public int currentHP;
     public Image hpBar;
     public TMP_Text hpText;
     private bool canTakeDamage = true;
@@ -64,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void Update()
     {
-        hpBar.fillAmount = (float)currentHP / 100;
+        hpBar.fillAmount = (float)currentHP / maxHP;
         hpText.text = currentHP.ToString();
         if (currentHP <= 0)
         {

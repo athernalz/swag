@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: HealthBoost
   m_EditorClassIdentifier: 
   upgradeName: Health Boost
-  upgradeSprite: {fileID: 21300000, guid: 0c1f66049f253a440b06c6ab1d07687e, type: 3}
   currentUpgradeLevel: 1
-  baseEffect: 25
-  description: Increases your health.
+  baseEffect: 5
+  description: Increases your max HP.
   icon: {fileID: 21300000, guid: 0c1f66049f253a440b06c6ab1d07687e, type: 3}
