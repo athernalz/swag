@@ -1671,6 +1671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kat: {fileID: 1635866210}
   maxHP: 100
+  currentHP: 0
   hpBar: {fileID: 830269445}
   hpText: {fileID: 638134337}
   redFlash: {fileID: 0}
@@ -1692,6 +1693,7 @@ MonoBehaviour:
   currentLevel: 0
   upgradeScreen: {fileID: 1525702851}
   upgradesManager: {fileID: 1793414957}
+  icon: {fileID: 0}
 --- !u!1 &1368300641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,8 +2890,7 @@ MonoBehaviour:
   availableUpgrades:
   - {fileID: 11400000, guid: bbe83fdd78ae8c349af55bc612e0409e, type: 2}
   - {fileID: 11400000, guid: 4dc570474aff77049882bed627e02cc5, type: 2}
-  - {fileID: 11400000, guid: 85656776a2fc974459a8f9c8d1da202a, type: 2}
-  - {fileID: 11400000, guid: ac37170f32e5553498f1708f6f22858a, type: 2}
+  - {fileID: 11400000, guid: a5222182f46106843a6a601b47344078, type: 2}
   upgradeButtons:
   - {fileID: 1681537572}
   - {fileID: 2082692044}
@@ -2906,6 +2907,9 @@ MonoBehaviour:
   - {fileID: 1013632844}
   - {fileID: 64626951}
   - {fileID: 1368300643}
+  playerHealth: {fileID: 1305448433}
+  playerMovement: {fileID: 1305448429}
+  disableUpgradeScreen: {fileID: 1525702848}
 --- !u!4 &1793414958
 Transform:
   m_ObjectHideFlags: 0
@@ -3394,7 +3398,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 165, y: 0}
-  m_SizeDelta: {x: 160, y: 463.23}
+  m_SizeDelta: {x: 160, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082692044
 MonoBehaviour:
@@ -3651,7 +3655,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -165, y: 0}
-  m_SizeDelta: {x: 160, y: 463.23}
+  m_SizeDelta: {x: 160, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116848057
 MonoBehaviour:
