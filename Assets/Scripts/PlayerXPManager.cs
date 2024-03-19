@@ -15,7 +15,6 @@ public class PlayerXPManager : MonoBehaviour
     public int currentLevel;
     public Canvas upgradeScreen;
     public UpgradesManager upgradesManager;
-    public static PlayerXPManager Instance { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
