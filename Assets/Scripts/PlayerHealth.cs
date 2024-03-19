@@ -6,6 +6,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 
@@ -23,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHP = maxHP;
-        redFlash.enabled = false;
+        // redFlash.enabled = false;
     }
     public void takeDamage(int amount)
     {
@@ -59,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
     }
     void Death()
     {
+        Time.timeScale = 0;
         Debug.Log("Player has died");
         kat.gameObject.SetActive(true);
         currentHP = 0;
