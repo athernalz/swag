@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4588532863971714644}
   - component: {fileID: 4414932588362747698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 89695399611569391}
   - component: {fileID: 4731577952192282511}
   - component: {fileID: 5679735707455276471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SimpleEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3782699645676377210}
   - component: {fileID: 3793338805956192969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 6905550932481308303}
   - component: {fileID: 4167209678083546611}
   - component: {fileID: 7103166489950865562}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: hpBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 5326003623620279212}
   - component: {fileID: 4674572357304582300}
   - component: {fileID: 4994084700049774477}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: hpbarEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7899113915784622311}
   - component: {fileID: 5876531382192844873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3479083221301671254}
   - component: {fileID: 8747431759732050843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5913895855947328760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
