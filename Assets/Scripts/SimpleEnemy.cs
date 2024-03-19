@@ -2,16 +2,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class SimpleEnemy : Enemy
 {
     public Image hpBarEnemy;
     public GameObject playerPrefab;
+    Rigidbody2D rb;
     public override void Start()
     {
         base.Start(); // Enemy.cs
         maxHP = 30;
         moveSpeed = 3.5f;
         currentHP = maxHP;
+        rb=GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -21,7 +24,8 @@ public class SimpleEnemy : Enemy
         // Make enemy follow player.
         if (playerPrefab != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerPrefab.transform.position, moveSpeed * Time.deltaTime);
+            Vector2 moveDirection = (playerPrefab.transform.position - transform.position).normalized;
+            rb.velocity = moveDirection * moveSpeed; // Set velocity for physics-based movement playerPrefab.transform.position, moveSpeed * Time.deltaTime);
         }
         else
         {
