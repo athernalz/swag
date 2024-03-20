@@ -3,13 +3,14 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int currentHP;
-    public int maxHP = 100;
+    public int maxHP;
     public float moveSpeed = 2.5f;
     public float worthXP = 21.5f;
     public PlayerXPManager playerXPManager;
 
     public virtual void Start()
     {
+        maxHP = 100;
         currentHP = maxHP; // Enemy starts off with the Max HP
     }
 

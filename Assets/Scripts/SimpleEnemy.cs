@@ -14,7 +14,7 @@ public class SimpleEnemy : Enemy
         maxHP = 30;
         moveSpeed = 3.5f;
         currentHP = maxHP;
-        rb=GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()

@@ -1,5 +1,3 @@
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScytheController : MonoBehaviour
@@ -8,14 +6,6 @@ public class ScytheController : MonoBehaviour
     public float speed;
     public float spinSpeed;
 
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("Hit enemy: " + collision.gameObject.name); // Output the name of the enemy object
-        }
-    }
     void Update()
     {
         // Check for mouse input
@@ -41,8 +31,13 @@ public class ScytheController : MonoBehaviour
 
             // Move scythe towards the cursor
             rb.velocity = direction * speed;
+
+            // Set the scythe as a trigger
+            Collider2D collider = scythe.GetComponent<Collider2D>();
+            collider.isTrigger = true;
+
+            // Destroy the scythe after a delay
             Destroy(scythe, 2f);
         }
-
     }
 }

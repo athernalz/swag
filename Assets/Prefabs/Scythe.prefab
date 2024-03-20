@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6727416015254499025}
   - component: {fileID: 2451235051478091150}
   - component: {fileID: 3994953401728170019}
+  - component: {fileID: 380349208197863468}
   m_Layer: 0
   m_Name: Scythe
   m_TagString: Untagged
@@ -128,7 +129,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -148,3 +149,15 @@ CircleCollider2D:
   m_Offset: {x: -0.024050383, y: -0.015304731}
   serializedVersion: 2
   m_Radius: 0.6618639
+--- !u!114 &380349208197863468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660365642461364370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f96f49af577e8449a52d786044ed1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
