@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public GameObject SimpleEnemyPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject AcidicSlime;
+    public GameObject Sniper;
 
-    // Update is called once per frame
+
     void Update()
     {
         Vector3 mouseScreenPosition = Input.mousePosition;
@@ -20,11 +16,20 @@ public class EnemyManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) // Alpha1 = "1"
         {
-            GameObject enemyInstance = Instantiate(SimpleEnemyPrefab, mouseWorldPosition, Quaternion.identity);
+            GameObject enemyInstance = Instantiate(AcidicSlime, mouseWorldPosition, Quaternion.identity);
             AcidicSlime enemyScript = enemyInstance.GetComponent<AcidicSlime>();
             if (enemyScript != null)
             {
                 enemyScript.playerPrefab = GameObject.FindGameObjectWithTag("Player"); // "Player" tag.
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) // Alpha1 = "1"
+        {
+            GameObject enemyInstance = Instantiate(Sniper, mouseWorldPosition, Quaternion.identity);
+            Sniper enemyScript = enemyInstance.GetComponent<Sniper>();
+            if (enemyScript != null)
+            {
+                
             }
         }
 
