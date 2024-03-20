@@ -2,7 +2,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class SimpleEnemy : Enemy
 {
     public Image hpBarEnemy;
@@ -14,6 +13,7 @@ public class SimpleEnemy : Enemy
         maxHP = 30;
         moveSpeed = 3.5f;
         currentHP = maxHP;
+        worthXP = 21.5f;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -30,11 +30,6 @@ public class SimpleEnemy : Enemy
         else
         {
             Debug.Log("Player not found");
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            TakeDamage(15);
         }
 
     }
