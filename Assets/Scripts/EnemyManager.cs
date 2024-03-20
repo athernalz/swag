@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) // Alpha1 = "1"
         {
             GameObject enemyInstance = Instantiate(SimpleEnemyPrefab, mouseWorldPosition, Quaternion.identity);
-            SimpleEnemy enemyScript = enemyInstance.GetComponent<SimpleEnemy>();
+            AcidicSlime enemyScript = enemyInstance.GetComponent<AcidicSlime>();
             if (enemyScript != null)
             {
                 enemyScript.playerPrefab = GameObject.FindGameObjectWithTag("Player"); // "Player" tag.

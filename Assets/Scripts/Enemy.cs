@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class Enemy : MonoBehaviour
 
     public virtual void Start()
     {
-        
         currentHP = maxHP; // Enemy starts off with the Max HP
     }
 
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         playerXPManager.currentXP += worthXP;
     }
 
-    public void TakeDamage(int amount)
+    public virtual void TakeDamage(int amount)
     {
         currentHP -= amount;
         Debug.Log(gameObject.name + " took " + amount + " damage.");
