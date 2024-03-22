@@ -1,10 +1,15 @@
 using UnityEngine;
 
-public class ScytheController : MonoBehaviour
+public class Scythe : MonoBehaviour
 {
     public GameObject scythePrefab;
     public float speed;
     public float spinSpeed;
+
+    private void Start()
+    {
+        scythePrefab.transform.localScale = new Vector2(1, 1);
+    }
 
     void Update()
     {

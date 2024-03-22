@@ -6,10 +6,13 @@ public class Upgrades : ScriptableObject
 {
 
     public string upgradeName;
-    public int currentUpgradeLevel;
     public float baseEffect;
     public string description;
     public Sprite icon;
+    public GameObject weaponPrefab;
+
+    [System.NonSerialized] // Using this so stats don't save.
+    public int currentUpgradeLevel;
 
     // Define a constant increase per level
     private const float IncreasePerLevel = 0.2f;

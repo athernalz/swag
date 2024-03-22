@@ -12,9 +12,9 @@ public class UpgradesManager : MonoBehaviour
     public TMP_Text[] upgradeDescription; // Assign the corresponding Text components for descriptions
     public Image[] upgradeIcons; // Assign the corresponding Image components for icons
     public TMP_Text[] upgradeCurrentLevel;
-    public PlayerHealth playerHealth;
-    public PlayerMovement playerMovement;
+    public Player player;
     public GameObject disableUpgradeScreen;
+    public GameObject weaponPrefab;
 
     private void Start()
     {
@@ -63,18 +63,21 @@ public class UpgradesManager : MonoBehaviour
         upgrade.Upgrade();
 
         int effectToApplyRounded = Mathf.RoundToInt(upgrade.GetCurrentEffect());
-
-
+        float floatGetCurrentEffect = (float)upgrade.GetCurrentEffect();
 
         switch (upgrade.upgradeName)
         {
             case "Health Boost":
-                playerHealth.maxHP += effectToApplyRounded;
-                playerHealth.currentHP += effectToApplyRounded;
+                player.maxHP += effectToApplyRounded;
+                player.currentHP += effectToApplyRounded;
                 break;
             case "Speed Boost":
                 float speedBoost = upgrade.GetCurrentEffect();
-                playerMovement.moveSpeed += speedBoost;
+                player.moveSpeed += speedBoost;
+                break;
+            case "Scythe Size":
+                UpgradesManager upgradesManager = GetComponent<UpgradesManager>();
+                upgradesManager.weaponPrefab.transform.localScale = new Vector2(1+(floatGetCurrentEffect * 2), 1+ (floatGetCurrentEffect * 2));
                 break;
             // Add more cases for other upgrade types as needed
             default:

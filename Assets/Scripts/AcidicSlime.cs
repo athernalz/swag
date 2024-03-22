@@ -32,12 +32,14 @@ public class AcidicSlime : Enemy
         }
     }
 
-    public override void TakeDamage(int amount)
+
+
+/*    public override void TakeDamage(int amount)
     {
         base.TakeDamage(amount); // Call base class TakeDamage method
 
         // Calculate the speed increase based on the amount of damage taken
         float speedIncreaseFactor = 0.1f; // Adjust this factor as needed
         moveSpeed += amount * speedIncreaseFactor;
-    }
+    }*/
 }

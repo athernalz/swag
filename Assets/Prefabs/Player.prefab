@@ -41,11 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5397139985881168236}
   - component: {fileID: 7112522659810377800}
-  - component: {fileID: 1982909380273992726}
   - component: {fileID: 1583127675422297228}
   - component: {fileID: 1816320393886809906}
-  - component: {fileID: 3887948750265759828}
-  - component: {fileID: 4316295551785805198}
   - component: {fileID: 4182995887893498181}
   m_Layer: 0
   m_Name: Player
@@ -126,19 +123,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1982909380273992726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7226423944092781361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae09310f3da777649807110b96f272fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
 --- !u!50 &1583127675422297228
 Rigidbody2D:
   serializedVersion: 4
@@ -211,44 +195,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3887948750265759828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7226423944092781361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb734d2c88cb61646beed5e566962fcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kat: {fileID: 0}
-  maxHP: 100
-  currentHP: 0
-  hpBar: {fileID: 0}
-  hpText: {fileID: 0}
-  redFlash: {fileID: 0}
---- !u!114 &4316295551785805198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7226423944092781361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ea39b69bd3d3d4f8b5b08d3218129c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xpBar: {fileID: 0}
-  currentXP: 0
-  maxXP: 0
-  xpText: {fileID: 0}
-  levelText: {fileID: 0}
-  currentLevel: 0
-  upgradeScreen: {fileID: 0}
-  upgradesManager: {fileID: 0}
 --- !u!114 &4182995887893498181
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
         startTime = Time.time;
         timerRunning = true;
         Time.timeScale = 1.0f;
-
     }
 
 
@@ -31,4 +30,5 @@ public class GameManager : MonoBehaviour
             timerText.text = minutes + ":" + seconds;
         }
     }
-}
+
+ }
