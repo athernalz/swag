@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
 
     void levelUp()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.levelUp);
         showUpgradeOptions();
         upgradesManager.DisplayRandomPowerups();
         currentLevel++;
@@ -102,6 +103,7 @@ public class Player : MonoBehaviour
     {
         if (canTakeDamage)
         {
+            AudioManager.Instance.PlaySound(AudioManager.Instance.playerHit);
             currentHP -= amount;
             Debug.Log("Player's health decreased to: " + currentHP);
 
@@ -128,6 +130,7 @@ public class Player : MonoBehaviour
 
     void Death()
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.playerDeath);
         Time.timeScale = 0;
         Debug.Log("Player has died");
         kat.gameObject.SetActive(true);

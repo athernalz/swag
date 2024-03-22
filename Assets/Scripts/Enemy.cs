@@ -26,9 +26,9 @@ public class Enemy : MonoBehaviour
 
     public virtual void TakeDamage(int amount)
     {
+        AudioManager.Instance.PlaySound(AudioManager.Instance.enemyHit);
         currentHP -= amount;
         Debug.Log(gameObject.name + " took " + amount + " damage.");
-
         if (currentHP <= 0)
         {
             Death();
@@ -40,9 +40,9 @@ public class Enemy : MonoBehaviour
         if (CameraShake.Instance != null)
         {
             CameraShake.Instance.ShakeCamera(0.5f, Random.Range(1f, 2f), Random.Range(0.4f, 0.57f));
-
             Debug.Log("shake pls");
         }
+        AudioManager.Instance.PlaySound(AudioManager.Instance.enemyDeath);
         GiveXPToPlayer();
         Debug.Log(gameObject.name + " died.");
         Destroy(gameObject);

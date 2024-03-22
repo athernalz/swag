@@ -104,9 +104,11 @@ MonoBehaviour:
   maxHP: 0
   moveSpeed: 5
   worthXP: 21.5
-  player: {fileID: -4019432030995984024, guid: bdd5c085b6d9de94184bc8425b37f23e, type: 3}
+  player: {fileID: 7235098562463355277, guid: b0affd0d5a64a464d8d0f41282ec8368, type: 3}
+  enemyDeath: {fileID: 8300000, guid: e2783731c765a8c4f95703522c1656ac, type: 3}
+  enemyHit: {fileID: 8300000, guid: c74f378be6f90d04ca8a79ad49d4f021, type: 3}
   hpBarEnemy: {fileID: 4994084700049774477}
-  playerPrefab: {fileID: 7226423944092781361, guid: bdd5c085b6d9de94184bc8425b37f23e, type: 3}
+  playerPrefab: {fileID: 0}
 --- !u!61 &4731577952192282511
 BoxCollider2D:
   m_ObjectHideFlags: 0

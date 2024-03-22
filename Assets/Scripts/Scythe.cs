@@ -22,6 +22,7 @@ public class Scythe : MonoBehaviour
 
             // Instantiate scythePrefab
             GameObject scythe = Instantiate(scythePrefab, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.scytheThrow);
 
             // Calculate direction towards the cursor
             Vector3 direction = (targetPosition - scythe.transform.position).normalized;
